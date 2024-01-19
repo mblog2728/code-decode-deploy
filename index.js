@@ -22,6 +22,7 @@ mongoose
 	});
 
 app.get("/", (req, res) => {
+	console.log("TELLTHEBOSS", __dirname);
 	res.json("Hello codedecode..!");
 });
 
