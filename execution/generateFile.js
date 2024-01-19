@@ -3,12 +3,14 @@ const fs = require("fs");
 const { v4: uuid } = require("uuid");
 
 const dirCodes = path.join(__dirname, "codes");
+console.log(dirCodes);
 const outputDir = path.join(__dirname, "outputs");
 
 fs.rmSync(dirCodes, { recursive: true, force: true });
 fs.rmSync(outputDir, { recursive: true, force: true });
 
 if (!fs.existsSync(dirCodes)) {
+	console.log("LINE 12", dirCodes);
 	fs.mkdirSync(dirCodes, { recursive: true, force: true });
 }
 
