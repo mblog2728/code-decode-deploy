@@ -9,7 +9,7 @@ fs.rmSync(dirCodes, { recursive: true, force: true });
 fs.rmSync(outputDir, { recursive: true, force: true });
 
 if (!fs.existsSync(dirCodes)) {
-	fs.mkdirSync(dirCodes, { recursive: true });
+	fs.mkdirSync(dirCodes, { recursive: true, force: true });
 }
 
 const generateFile = async (format, content) => {
